@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-info">
+            <a href="./index.html"><img class="logo" src="{% static 'assets/images/logo.png' %}" alt="Bloomberg Industry Group Logo"></a>
+            <span class="site-title">API Developer Portal</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <span id="api-library">API Library</span>
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu hide">
+                <a href="" class="menu-item law-menu-item">Bloomberg Law</a>
+                <a href="" class="menu-item tax-menu-item">Bloomberg Tax & Accounting</a>
+                <a href="" class="menu-item gov-menu-item">Bloomberg Government</a>
+                <a href="" class="menu-item news-menu-item">Bloomberg News</a>
+                <a href="" class="menu-item all-menu-item">View All</a>
+            </div>
+            <a href="index.html">Products</a>
+            <a href="/about/">Documentation</a>
+            <a href="/blog/">Services & Support</a>
+            <a href="/blog/">Log In</a>
+            <a href="/search-all"><i class="fas fa-search"></i>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Introduction -->
+    <div class="introduction">
+        <h1 class="introduction-title">Build Cool Stuff With Our APIs.</h1>
+        <p class="introduction-text">Your one stop enterprise shop for law, tax & accounting, government and news APIs with premier data from Bloomberg.</p>
+    </div>
+
+    <!-- Explore By Product -->
+    <div class="explore">
+        <h2 class="explore-title">Explore By Product</h2>
+        <div class="explore-products">
+            <div class="explore-product explore-product-law">
+                <span class="explore-product-title">Bloomberg Law</span>
+                <span class="explore-product-description">Search for laws and statutes in international, state, and federal jurisdictions.</span>
+                <button class="explore-more-button">Browse APIs</button>
+            </div>
+
+            <div class="explore-product explore-product-tax">
+                <span class="explore-product-title">Bloomberg Tax & Accounting</span>
+                <span class="explore-product-description">Calculate income taxes, view 10-K filings and translate documents.</span>
+                <button class="explore-more-button">Browse APIs</button>
+            </div>
+            <div class="explore-product explore-product-gov">
+                <span class="explore-product-title">Bloomberg Government</span>
+                <span class="explore-product-description">Search for contractors and other government things idk about.</span>
+                <button class="explore-more-button">Browse APIs</button>
+            </div>
+            <div class="explore-product explore-product-news">
+                <span class="explore-product-title">Bloomberg News</span>
+                <span class="explore-product-description">Alert when a new story is released or other newsy things.</span>
+                <button class="explore-more-button">Browse APIs</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search -->
+    <div class="search">
+        <h2 class="search-title">Search APIs</h2>
+        <p class="search-text">Search across our API library with all of our product offerings</p>
+            <div class="search-bar">
+                <input class="search-input" type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search API Library">
+                <button class="search-button" >Search</button>
+            </div>
+        </h2>
+    </div>
+
+    <!-- Help -->
+    <div class="help">
+        <h2 class="help-title">Need Help?</h2>
+        <p class="help-text">For questions about integrating APIs, our products, and access</p>
+        <p class="help-text">Please visit Services & Support</p>
+        <button class="services-and-support-button">View Services & Support</button>
+    </div>
+
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>
+{% endblock %}

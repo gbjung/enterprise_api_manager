@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/search-api-results.css' %}">
+
+<body>
+    <!-- Search Bar -->
+    <div class="search">
+        <div class="search-bar">
+            <input class="search-input" type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search API Library">
+            <button class="search-button" >Search</button>
+        </div>
+    </div>
+
+    <div class="main-search-results">
+        <!-- Filters -->
+        <aside>
+            <div class="product-filter">
+                <span class="filter-title">Filter By Product</span>
+                <div><input type="checkbox" name="law" id="law" class="filter-item"><label for="law">Bloomberg Law</label></div>
+                <div><input type="checkbox" name="law" id="law" class="filter-item"><label for="law">Bloomberg Tax & Accounting</label></div>
+                <div><input type="checkbox" name="law" id="law" class="filter-item"><label for="law">Bloomberg Government</label></div>
+                <div><input type="checkbox" name="law" id="law" class="filter-item"><label for="law">Bloomberg News</label></div>
+            </div>
+        </aside>
+
+        <!-- Search Results -->
+        <div class="search-results">
+            <h2 class="search-results-title">Browse APIs</h2>
+            <!-- Results -->
+
+            <div class="results">
+                <!-- Search Tax -->
+                <div class="result" type="tax">
+                    <h3 class="result-title">Search Tax</h3>
+                    <h4 class="product">Tax & Accounting</h4>
+                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <div class="best-for">
+                        <p>Best for:</p>
+                        <ul>
+                            <li>Intranet integration</li>
+                            <li>Something</li>
+                            <li>Something else</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fast Answers -->
+                <div class="result" type="tax">
+                    <h3 class="result-title">Fast Answers</h3>
+                    <h4 class="product">Tax & Accounting</h4>
+                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <div class="best-for">
+                        <p>Best for:</p>
+                        <ul>
+                            <li>Intranet integration</li>
+                            <li>Something</li>
+                            <li>Something else</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Portfolios -->
+                <div class="result" type="tax">
+                    <h3 class="result-title">Portfolios</h3>
+                    <h4 class="product">Tax & Accounting</h4>
+                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <div class="best-for">
+                        <p>Best for:</p>
+                        <ul>
+                            <li>Intranet integration</li>
+                            <li>Something</li>
+                            <li>Something else</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Daily Tax Report -->
+                <div class="result" type="tax">
+                    <h3 class="result-title">Daily Tax Report</h3>
+                    <h4 class="product">Tax & Accounting</h4>
+                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <div class="best-for">
+                        <p>Best for:</p>
+                        <ul>
+                            <li>Intranet integration</li>
+                            <li>Something</li>
+                            <li>Something else</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- Developments Tracker -->
+                <div class="result" type="tax">
+                    <h3 class="result-title">Developments Tracker</h3>
+                    <h4 class="product">Tax & Accounting</h4>
+                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <div class="best-for">
+                        <p>Best for:</p>
+                        <ul>
+                            <li>Intranet integration</li>
+                            <li>Something</li>
+                            <li>Something else</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Additional Analysis -->
+                <div class="result" type="tax">
+                    <h3 class="result-title">Additional Analysis</h3>
+                    <h4 class="product">Tax & Accounting</h4>
+                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <div class="best-for">
+                        <p>Best for:</p>
+                        <ul>
+                            <li>Intranet integration</li>
+                            <li>Something</li>
+                            <li>Something else</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="./script.js"></script>
+</html>
+{% endblock %}

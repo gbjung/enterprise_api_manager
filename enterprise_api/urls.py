@@ -13,10 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from verticals.views import VerticalsViewSet
 from rest_framework import routers
+from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 
@@ -24,8 +26,11 @@ router.register(r'verticals', VerticalsViewSet)
 
 urlpatterns = [
     path('_nested_admin/', include('nested_admin.urls')),
+    path('', include('client_app.urls')),
     path('', include(router.urls)),
     path('grappelli/', include('grappelli.urls')), # grappelli URLS
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls'))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+print(settings.STATIC_URL,settings.STATIC_ROOT)

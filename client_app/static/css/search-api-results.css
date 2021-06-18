@@ -1,0 +1,147 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.search {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100px;
+}
+
+.search-bar {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 700px;
+    height: 40px;
+    background: #f8f8f8;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.search-input {
+    height: 100%;
+    width: 85%;
+    border-radius: 5px;
+    border: none;
+    padding-left: 20px;
+    font-size: 15px;
+    letter-spacing: 0.75px;
+    background-color: #f8f8f8;
+}
+
+.search-button {
+    width: 15%;
+    border: none;
+    background: none;
+    color: #f8f8f8;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgb(146, 146, 146);
+    height: 100%;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    background-color: rgb(82, 82, 82);
+}
+
+.main-search-results {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+.product-filter {
+    display: flex;
+    flex-flow: column;
+    width: 300px;
+    height: 300px;
+    padding: 20px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+.filter-title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.filter-item {
+    margin-top: 20px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+}
+
+.search-results-title {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.search-results {
+    margin-left: 30px;
+}
+
+.results {
+    display: flex;
+    flex-flow: row wrap;
+    width: 1240px;
+    justify-content: space-between;
+}
+
+.result {
+    border: 1px solid #c5cacd;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 10%);
+    padding: 20px;
+    border-top-width: 5px;
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+.result:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 40%);
+}
+
+.result-title {
+    font-size: 24px;
+}
+
+.product {
+    color: #898c8d;
+    font-size: 12px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.search-description {
+    margin-top: 20px;
+    line-height: 24px;
+}
+
+.result[type="tax"] {
+    border-top-color: rgb(39, 133, 214);
+}
+
+.best-for {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.best-for > ul {
+    margin-left: 40px;
+    margin-top: 10px;
+}
