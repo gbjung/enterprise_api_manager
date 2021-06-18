@@ -34,7 +34,7 @@ GRAPPELLI_ADMIN_TITLE = 'BLOOMBERG INDG API PLATFORM'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.26.7.156', '3.94.231.193']
+ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
