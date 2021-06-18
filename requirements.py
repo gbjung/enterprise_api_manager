@@ -1,5 +1,6 @@
 asgiref==3.3.4
 Django==3.2.4
+django-environ==0.4.5
 django-filter==2.4.0
 django-grappelli==2.15.1
 django-nested-admin==3.3.3
