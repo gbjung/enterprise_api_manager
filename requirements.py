@@ -1,0 +1,11 @@
+asgiref==3.3.4
+Django==3.2.4
+django-filter==2.4.0
+django-grappelli==2.15.1
+django-nested-admin==3.3.3
+djangorestframework==3.12.4
+Markdown==3.3.4
+python-monkey-business==1.0.0
+pytz==2021.1
+six==1.16.0
+sqlparse==0.4.1
