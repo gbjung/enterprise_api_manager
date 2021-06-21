@@ -1,5 +1,5 @@
 .introduction {
-    background-image: url("/static/assets/background.png");
+    background-image: url("../assets/background.png");
     height: 500px;
     margin: 0;
     position: static;
@@ -9,9 +9,9 @@
 .introduction-title {
     color: white;
     margin-left: 175px;
-    padding-top: 100px;
+    padding-top: 150px;
     font-size: 60px;
-    width: 500px;
+    width: 1000px;
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -29,7 +29,7 @@
 
 .explore-title, .search-title  {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .explore {
@@ -84,6 +84,7 @@
 .explore-more-button:hover {
     background-color: #777c7f;
     color: white;
+    cursor: pointer;
 }
 
 .explore-product-law {
@@ -144,7 +145,7 @@
     align-items: center;
     height: 400px;
     padding: 35px 50px 50px;
-    background-image: url("./assets/background.png");
+    background-image: url("../assets/background.png");
     color: white;
 }
 

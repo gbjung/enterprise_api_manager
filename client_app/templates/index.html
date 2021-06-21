@@ -4,8 +4,8 @@
 <body>
     <!-- Introduction -->
     <div class="introduction">
-        <h1 class="introduction-title">Build Cool Stuff With Our APIs.</h1>
-        <p class="introduction-text">Your one stop enterprise shop for law, tax & accounting, government and news APIs with premier data from Bloomberg.</p>
+        <h1 class="introduction-title">Enhance your workflows with cutting-edge data and analysis.</h1>
+        <p class="introduction-text">Introducing API services across law, tax & accounting, government and news from Bloomberg Industry Group.</p>
     </div>
 
     <!-- Explore By Product -->
@@ -15,23 +15,23 @@
             <div class="explore-product explore-product-law">
                 <span class="explore-product-title">Bloomberg Law</span>
                 <span class="explore-product-description">Search for laws and statutes in international, state, and federal jurisdictions.</span>
-                <button class="explore-more-button">Browse APIs</button>
+                <button class="explore-more-button">Browse</button>
             </div>
 
             <div class="explore-product explore-product-tax">
                 <span class="explore-product-title">Bloomberg Tax & Accounting</span>
-                <span class="explore-product-description">Calculate income taxes, view 10-K filings and translate documents.</span>
-                <button class="explore-more-button">Browse APIs</button>
+                <span class="explore-product-description">Search Portfolios, access State Tax Navigators, and get Daily Tax Report updates.</span>
+                <button class="explore-more-button" name="target" onclick="location.href='{% url 'search_result' %}'">Browse</button>
             </div>
             <div class="explore-product explore-product-gov">
                 <span class="explore-product-title">Bloomberg Government</span>
-                <span class="explore-product-description">Search for contractors and other government things idk about.</span>
-                <button class="explore-more-button">Browse APIs</button>
+                <span class="explore-product-description">Search for contractors, government contacts, and receive updates from the state and federal governments.</span>
+                <button class="explore-more-button">Browse</button>
             </div>
             <div class="explore-product explore-product-news">
                 <span class="explore-product-title">Bloomberg News</span>
-                <span class="explore-product-description">Alert when a new story is released or other newsy things.</span>
-                <button class="explore-more-button">Browse APIs</button>
+                <span class="explore-product-description">Breaking news alerts and analysis from industry experts in law, tax, accounting, and government.</span>
+                <button class="explore-more-button">Browse</button>
             </div>
         </div>
     </div>
@@ -44,7 +44,6 @@
                 <input class="search-input" type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search API Library">
                 <button class="search-button" >Search</button>
             </div>
-        </h2>
     </div>
 
     <!-- Help -->

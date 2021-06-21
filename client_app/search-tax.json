@@ -1,0 +1,103 @@
+{
+    "query_term": "depreciation", 
+    "portfolios": [
+      {
+        "title": "Depreciation: General Concepts; Non-ACRS Rules (530 T.M.)",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/tm%20530"
+      },
+      {
+        "title": "Depreciation: MACRS and ACRS (531 T.M.)",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/tm%20531"
+      },
+      {
+        "title": "First-Year Expensing and Additional Depreciation (532 T.M.)",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/bna%20tm%20532"
+      }
+    ],
+    "codes_and_regulations": [
+      {
+        "title": "I.R.C. &#167; 167 Depreciation,",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/26%20usc%20167"
+      },
+      {
+        "title": "I.R.C. &#167; 168 Accelerated Cost Recovery System",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/26%20usc%20168"
+      },
+      {
+        "title": "Reg. &#167; 1.167(a)-1 Depreciation In General -",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/26%20cfr%201.167%28a%29-1"
+      },
+      {
+        "title": "Reg. &#167; 1.167(a)-14 Treatment Of Certain Intangible Property Excluded From Section 197,",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/26%20cfr%201.167%28a%29-14"
+      },
+      {
+        "title": "Reg. &#167; 1.167(b)-1 Straight Line Method",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/26%20cfr%201.167%28b%29-1"
+      }
+    ],
+    "Key Rulings": [
+      {
+        "title": "Rev. Proc. 87-57, 1987-2 C.B. 687",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/irs%20revproc%2087-57"
+      },
+      {
+        "title": "Rev. Proc. 89-15, 1989-1 C.B. 816",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/irs%20rev%20proc%2089-15"
+      }
+    ],
+    "related_analysis": [
+      {
+        "title": "Depreciation of Realty and Tangible Property (TPS &#182;2370)",
+        "url": "https://www.bloomberglaw.com/product/tax/citation/bna%20tps%202370"
+      }
+    ],
+    "Practice Guides": [
+      {
+        "title": "Computing Depreciation for Tangible Property (&#167;168)",
+        "url": "https://www.bloomberglaw.com/product/tax/document/X8RR73FC000000"
+      },
+      {
+        "title": "Determining Depreciation for a Short Tax Year (&#167;168)",
+        "url": "https://www.bloomberglaw.com/product/tax/document/X90A1LVK000000"
+      },
+      {
+        "title": "Determining Initial Depreciable Basis (&#167;168)",
+        "url": "https://www.bloomberglaw.com/product/tax/document/X9IJEFVG000000"
+      },
+      {
+        "title": "Determining the Applicable Depreciation Method and Placed-in-Service Convention (&#167;168)",
+        "url": "https://www.bloomberglaw.com/product/tax/document/X53DM07G000000"
+      },
+      {
+        "title": "Determining the Applicable Depreciation Recovery Period of Tangible Property (&#167;168)",
+        "url": "https://www.bloomberglaw.com/product/tax/document/XCDC0858000000"
+      },
+      {
+        "title": "Determining Whether the Alternative Depreciation System is Mandatory (&#167;168(g))",
+        "url": "https://www.bloomberglaw.com/product/tax/document/X2JKE2M0000000"
+      },
+      {
+        "title": "Determining Who May Take Depreciation (&#167;168)",
+        "url": "https://www.bloomberglaw.com/product/tax/document/X2PJ8EO8000000"
+      },
+      {
+        "title": "Disposing of Depreciable Property (&#167;168)",
+        "url": "https://www.bloomberglaw.com/product/tax/document/X3RMQ130000000"
+      },
+      {
+        "title": "Identifying the Depreciable Asset and Determining When it is Placed in Service (&#167;168)",
+        "url": "https://www.bloomberglaw.com/product/tax/document/X13MPIOG000000"
+      },
+      {
+        "title": "Planning for Depreciation of Tangible Property (&#167;168)",
+        "url": "https://www.bloomberglaw.com/product/tax/document/XDJ7MLS000000"
+      }
+    ],
+    "Table": [
+      {
+        "title": "Depreciation Tables from IRS Pub. 946",
+        "url": "https://www.bloomberglaw.com/product/tax/document/XHU5EV1C"
+      }
+    ]
+  }

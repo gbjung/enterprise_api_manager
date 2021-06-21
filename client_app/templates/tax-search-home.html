@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<body>
+    <main>
+        <!-- Navigation Bar -->
+        <div class="api-nav">
+            <span class="api-name">Search Tax API</span>
+            <a href="" class="nav-tab active">Get Started</a>
+            <a href="{% url 'tax-search-reference-docs' %}" class="nav-tab">Reference Docs</a>
+            <a href="" class="nav-tab">Release Notes</a>
+
+            <a href="" class="try-now">Try Now</a>
+            <a href="" class="get-access">Get Access</a>
+        </div>
+
+        <!-- Documentation Container -->
+        <div class="documentation-container">
+            <!-- Section Side Nav -->
+            <div class="side-nav">
+                <span class="side-nav-list active-nav">Overview</span>
+                <ul>
+                    <li class="side-nav-item active-nav">Services</li>
+                    <li class="side-nav-item">Using the API</li>
+                    <li class="side-nav-item">Getting Started</li>
+                </ul>
+                <ul class="side-nav-list"><span class="clickme" onclick="location.href='{% url 'tax-search-get-started' %}'">User Guide</span>
+                    <li class="side-nav-item">Get Access</li>
+                    <li class="side-nav-item">Authentication</li>
+                    <li class="side-nav-item">Environments</li>
+                    <li class="side-nav-item">Rate Limits</li>
+                    <li class="side-nav-item">Additional Information</li>
+                </ul>
+                <ul class="side-nav-list">Legal Terms</ul>
+            </div>
+
+            <!-- Documentation -->
+            <div class="documentation">
+                <h1 class="section-title">Search Tax API</h1>
+                <span class="version">v5.7.0</span>
+                <p class="description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                <span class="note">Best For:</span>
+                <ul class="best-for">
+                    <li>Intranet integration</li>
+                    <li>Research trails</li>
+                    <li>Something else</li>
+                </ul>
+                <hr>
+                <h1>Overview</h1>
+                <p>This API contains all of the capabilities of searching our extensive Tax product. It enables integration channels for our customers and partners.</p>
+                <h2>Services</h2>
+                <div class="room"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et tristique arcu. Suspendisse lobortis, est sed semper lobortis, ipsum arcu convallis lectus, eget mollis erat nulla nec dolor. Maecenas porta augue vitae enim tincidunt, eget finibus arcu commodo.</p>
+                <p>Duis eros nulla, efficitur sed molestie at, iaculis sollicitudin enim. Sed eget lectus vel sapien lobortis posuere. Maecenas sit amet felis leo. Aliquam ultricies nisi ut efficitur vestibulum. Sed in leo ipsum. Donec varius, risus ut rutrum aliquet, nunc erat gravida lacus, sit amet efficitur urna risus pellentesque diam. Donec rhoncus nisi vitae est accumsan, sit amet sagittis ex porttitor. Ut sed vulputate lorem, vel elementum risus. Phasellus ultrices ex eget sapien ullamcorper, nec porta sapien rutrum.</p>
+                <h2>Using the API</h2>
+                <div class="room"></div>
+                <p>The API has been designed for use by developers. You will need basic knowledge of REST APIs, JSON, and HTTPS.</p>
+                <h2>Getting Started</h2>
+                <div class="room"></div>
+                <span class="note">New Customers:</span>
+                <ul class="how-to">
+                    <li>To receive API credentials and start shipping with us, please contact our local sales team here or talk to your local sales representative.  Please provide the name of your company name and a contact person (first name, last name and e-mail address).</li>
+                    <li>Once everything is settled, you will receive access to the sandbox for testing.</li>
+                    <li>After successful testing you will receive credentials for the production environment.</li>
+                    <li>Simply create your API request, using a valid access token required as described in our API reference documentation to submit shipments or get tracking information.</li>
+                </ul>
+
+                <span class="note">Existing Customers:</span>
+                <ul class="how-to">
+                    <li>To receive API credentials please contact to your local sales representative. Please provide your Deutsche Post account number, your company name, and a contact person (first name, last name and e-mail address).</li>
+                    <li>You will receive access to the sandbox for testing.
+                    </li>
+                    <li>After successful testing you will receive credentials for the production environment.
+                    </li>
+                    <li>Simply create your API request, using a valid access token required as described in our API reference documentation to submit shipments or get tracking information.</li>
+                </ul>
+
+
+            </div>
+        </div>
+    </main>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>
+{% endblock %}

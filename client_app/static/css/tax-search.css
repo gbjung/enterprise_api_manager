@@ -1,0 +1,281 @@
+.api-nav {
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c5cacd;
+    height: 60px;
+}
+
+.api-name {
+    font-size: 26px;
+    font-weight: 500;
+    margin-right: 200px;
+}
+
+.nav-tab {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 5px;
+    font-weight: 500;
+    margin-right: 90px;
+}
+
+.active, .nav-tab:hover {
+    color: rgb(39, 133, 214);
+    border-bottom: 2px solid rgb(39, 133, 214);
+}
+
+.side-nav {
+    border-right: 1px solid #c5cacd;
+    width: 300px;
+    height: 1900px;
+    padding-left: 50px;
+    padding-top: 60px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.side-nav-item {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    list-style: none;
+}
+
+.side-nav-list {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+}
+
+.try-now {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(39, 133, 214);
+    text-transform: uppercase;
+    font-family: inherit;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin-right: 30px;
+    margin-left: 320px;
+}
+
+.try-now:hover {
+    background-color: rgb(23, 74, 119);
+}
+
+.get-access {
+    text-decoration: none;
+    color: rgb(39, 133, 214);
+    border: 2px solid rgb(39, 133, 214);
+    background-color: white;
+    text-transform: uppercase;
+    font-family: inherit;
+    border-radius: 5px;
+    padding: 7px 13px;
+    font-weight: 500;
+}
+
+.get-access:hover {
+    background-color: rgb(39, 133, 214);
+    color: white;
+}
+
+.active-nav,  .side-nav-item:hover {
+    color:rgb(39, 133, 214);
+    cursor: pointer;
+}
+
+.documentation {
+    padding: 50px;
+    width: 65%;
+}
+
+.documentation-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.section-heading, .section-subheading, p {
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    margin-top: 20px;
+}
+
+p, li {
+    margin-bottom: 15px;
+}
+
+li {
+    margin-left: 70px;
+}
+
+.code-snippet {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    color: white;
+    width: 1000px;
+    padding: 40px;
+    background-color: rgb(2, 2, 29);
+    border-radius: 10px;
+    margin: 35px 0;
+}
+
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    width: 800px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+
+.space {
+    margin: 40px 0;
+}
+
+.version {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.clickme:hover {
+    color:rgb(39, 133, 214);
+    cursor: pointer;
+}
+
+.note {
+    font-weight: 900;
+}
+
+p {
+    line-height: 28px;
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.best-for {
+    margin-top: 20px;
+}
+
+hr {
+    margin: 35px 0;
+    background-color: #c5cacd;
+    border: none;
+    height: 1px;
+}
+
+.how-to {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.room {
+    margin-bottom: 10px;
+}
+
+.how-to > li {
+    line-height: 25px;
+}
+
+.category-nav {
+    border-right: 1px solid #c5cacd;
+    width: 300px;
+    height: 3900px;
+    padding-left: 50px;
+    padding-top: 60px;
+}
+
+.action {
+    list-style: none;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+.get {
+    margin-right: 10px;
+    font-size: 13px;
+    color:rgb(6, 129, 6);
+}
+
+.action:hover {
+    cursor: pointer;
+}
+
+.category-title {
+    font-weight: 700;
+}
+
+.action-list {
+    margin-top: 20px;
+}
+
+.fa-file-download {
+    color:rgb(39, 133, 214);
+}
+
+.download {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    float: right;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0px;
+    margin-right: 45px;
+}
+
+.api-example {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 50px;
+    padding-top: 50px;
+}
+
+.url {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.big {
+    font-size: 18px;
+}
+
+.search-all-title {
+    margin-bottom:15px;
+}
+
+table {
+    text-align: left;
+    width: 800px;
+}
+
+th {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+tr {
+    height: 50px;
+}
+
+.param {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.param-location {
+    font-style: italic;
+}
+
+.param-type {
+    font-weight: 500;
+}

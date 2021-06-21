@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<body>
+    <main>
+        <!-- Navigation Bar -->
+        <div class="api-nav">
+            <span class="api-name">Search Tax API</span>
+            <a href="" class="nav-tab active">Get Started</a>
+            <a href="{% url 'tax-search-reference-docs' %}" class="nav-tab">Reference Docs</a>
+            <a href="" class="nav-tab">Release Notes</a>
+
+            <a href="" class="try-now">Try Now</a>
+            <a href="" class="get-access">Get Access</a>
+        </div>
+
+        <!-- Documentation Container -->
+        <div class="documentation-container">
+            <!-- Section Side Nav -->
+            <div class="side-nav">
+                <span class="side-nav-list">Overview</span>
+                <ul>
+                    <li class="side-nav-item">Services</li>
+                    <li class="side-nav-item">Using the API</li>
+                    <li class="side-nav-item">Getting Started</li>
+                </ul>
+                <ul class="side-nav-list"><span class="active-nav" onclick="">User Guide</span>
+                    <li class="side-nav-item active-nav">Get Access</li>
+                    <li class="side-nav-item">Authentication</li>
+                    <li class="side-nav-item">Environments</li>
+                    <li class="side-nav-item">Rate Limits</li>
+                    <li class="side-nav-item">Additional Information</li>
+                </ul>
+                <ul class="side-nav-list">Legal Terms</ul>
+            </div>
+
+            <!-- Documentation -->
+            <div class="documentation">
+                <h1 class="section-title">User Guide</h1>
+                <h2 class="section-heading">Get Access</h2>
+                <ol>
+                    <li>Log in with your developer credentials.</li>
+                    <li>If you are unable to access, please contact your sales representative.</li>
+                    <li>Use your Access Token below to begin working with the API.</li>
+                </ol>
+                <p><span class="note">Note: </span>The Sandbox environment is accessible directly from this documentation page, where you can leverage the predefined test requests in Reference section.</p>
+                <div class="space"></div>
+                <h2 class="section-heading">Authentication</h2>
+                <h3 class="section-subheading">Access Token</h3>
+                <p>The API provides an OAuth 2.0 access token with various authorization scopes.</p>
+                <p>The access token can be used to authorize access for the Deutsche Post Shipping API.</p>
+                <div class="space"></div>
+                <h3 class="section-subheading">Get Access Token</h3>
+                <p>The Get Access Token API call provides OAuth 2.0 Bearer token with authorization scope, assigned to your client id, which will grants you an access to the Deutsche Post International Shipping APIs.</p>
+                <p>The API operation is secured by HTTP Basic authentication, therefore you have to provide client_id and client_secret as an username and password, when calling the API.</p>
+                <div class="space"></div>
+                <h3 class="section-subheading">Example:</h3>
+                <p>You will receive client_id and client_secret from Deutsche Post International representative in following format.
+                    Credentials bellow could be used in this Sandbox environment to get the Access Token.
+                </p>
+
+                <div class="code-snippet">
+                    <span class="code">Client_id: c96b49bb-c378-4a15-b2e3-842a9850b23d</span>
+                    <span class="code">Client_secret: be44af0a-74f9-438e-a3ac-e3e21d84259f</span>
+                </div>
+
+                <p>When passing the client_id and client_secret via HTTPS request, using HTTP Basic authentication, you have to populate HTTP Header Authorization in following format.</p>
+                <p><span class="note">Note: </span>Client_id and client_secret has to be encoded in base64-encoding. There is a space characeter between Basic and the base64-encoded string. There is a : character between the client_id and client_secret, when encoded in base64-encoding.</p>
+                <div class="code-snippet">
+                    <span class="code">Authorization: Basic base64-encoded(client_id:client_secret)</span>
+                    <span class="code">Authorization: Basic</span>
+                    <span class="code">Yzk2YjQ5YmItYzM3OC00YTE1LWIyZTMtODQyYTk4NTBiMjNkOmJlNDRhZjBhLTc0Zjk</span>
+                </div>
+                <p><span class="note">Note: </span>You can test the Get Access Token API directly from the documentation page. The Authorization HTTP Header was populated for you in the Console View on the right side of the screen.</p>
+                <p>You will receive following response in the JSON format.</p>
+                <div class="code-snippet">
+                    <span class="code">{</span>
+                    <span class="code">&nbsp;&nbsp;"access_token": "vzoJsASlFm0rfz3HsZEWC69lgQcytQQqWJvk9eBL3cMF8j7W4ny4Dh",</span>
+                    <span class="code">&nbsp;&nbsp;"token_type": "Bearer",</span>
+                    <span class="code">&nbsp;&nbsp;"expires_in": 18000,</span>
+                    <span class="code">&nbsp;&nbsp;"scope": "dpilabel dpitracking"</span>
+                    <span class="code">}</span>
+                </div>
+                <p>Understanding of the response fields: access_token: Contains Access Token string for the Shipping / Tracking API authentication and authorization.</p>
+
+                <ul>
+                    <li>token_type: Type of the OAuth 2.0 access token. Default value is "Bearer".</li>
+                    <li>expires_in: Time to live of the access token. Default value is 18000 seconds / 5 hours. After this time the token expires.</li>
+                    <li>scope: Authorization scope of access token. Default value for Shipping API is "dpilabel". It could contain multiple scope values, which will be separated by space character.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>
+{% endblock %}

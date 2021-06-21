@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/search-api-results.css' %}">
-
+<html lang="en">
 <body>
     <!-- Search Bar -->
     <div class="search">
@@ -18,7 +17,7 @@
             <div class="product-filter">
                 <span class="filter-title">Filter By Product</span>
                 <div><input type="checkbox" name="law" id="law" class="filter-item"><label for="law">Bloomberg Law</label></div>
-                <div><input type="checkbox" name="law" id="law" class="filter-item"><label for="law">Bloomberg Tax & Accounting</label></div>
+                <div><input type="checkbox" name="law" id="law" class="filter-item" checked><label for="law">Bloomberg Tax & Accounting</label></div>
                 <div><input type="checkbox" name="law" id="law" class="filter-item"><label for="law">Bloomberg Government</label></div>
                 <div><input type="checkbox" name="law" id="law" class="filter-item"><label for="law">Bloomberg News</label></div>
             </div>
@@ -31,7 +30,8 @@
 
             <div class="results">
                 <!-- Search Tax -->
-                <div class="result" type="tax">
+                <div class="result" type="tax" onclick="location.href='{% url 'tax-search-home' %}'">
+                    <span class="popular">Popular</span>
                     <h3 class="result-title">Search Tax</h3>
                     <h4 class="product">Tax & Accounting</h4>
                     <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
@@ -39,17 +39,18 @@
                         <p>Best for:</p>
                         <ul>
                             <li>Intranet integration</li>
-                            <li>Something</li>
+                            <li>Research Trails</li>
                             <li>Something else</li>
                         </ul>
                     </div>
+                    <a href="{% url 'tax-search-get-started' %}" class="view-docs">View Docs →</a>
                 </div>
 
                 <!-- Fast Answers -->
                 <div class="result" type="tax">
                     <h3 class="result-title">Fast Answers</h3>
                     <h4 class="product">Tax & Accounting</h4>
-                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <p class="search-description">Q&A style analysis designed to provide brief answer with links to supporting documentation and further analysis.</p>
                     <div class="best-for">
                         <p>Best for:</p>
                         <ul>
@@ -58,13 +59,14 @@
                             <li>Something else</li>
                         </ul>
                     </div>
+                    <a href="" class="view-docs">View Docs →</a>
                 </div>
 
-                <!-- Portfolios -->
+                <!-- Treaties -->
                 <div class="result" type="tax">
-                    <h3 class="result-title">Portfolios</h3>
+                    <h3 class="result-title">Treaties</h3>
                     <h4 class="product">Tax & Accounting</h4>
-                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <p class="search-description">Access to our Treaty Library, an extensive, translated library with full consolidated text of treaties.</p>
                     <div class="best-for">
                         <p>Best for:</p>
                         <ul>
@@ -73,13 +75,14 @@
                             <li>Something else</li>
                         </ul>
                     </div>
+                    <a href="" class="view-docs">View Docs →</a>
                 </div>
 
                 <!-- Daily Tax Report -->
                 <div class="result" type="tax">
                     <h3 class="result-title">Daily Tax Report</h3>
                     <h4 class="product">Tax & Accounting</h4>
-                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <p class="search-description">Keep up to date on the latest  news customizable daily coverage of federal, state, and international tax.</p>
                     <div class="best-for">
                         <p>Best for:</p>
                         <ul>
@@ -88,6 +91,7 @@
                             <li>Something else</li>
                         </ul>
                     </div>
+                    <a href="" class="view-docs">View Docs →</a>
                 </div>
 
 
@@ -95,7 +99,7 @@
                 <div class="result" type="tax">
                     <h3 class="result-title">Developments Tracker</h3>
                     <h4 class="product">Tax & Accounting</h4>
-                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <p class="search-description">Stay in the know with summaries of the latest developments across federal, state and international taxes.</p>
                     <div class="best-for">
                         <p>Best for:</p>
                         <ul>
@@ -104,13 +108,14 @@
                             <li>Something else</li>
                         </ul>
                     </div>
+                    <a href="" class="view-docs">View Docs →</a>
                 </div>
 
                 <!-- Additional Analysis -->
                 <div class="result" type="tax">
                     <h3 class="result-title">Additional Analysis</h3>
                     <h4 class="product">Tax & Accounting</h4>
-                    <p class="search-description">Search our tax product across our signature portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables.</p>
+                    <p class="search-description">Library consisting of State Tax Navigators, Federal Tax Practice Series, Country Guides and VAT Navigator.</p>
                     <div class="best-for">
                         <p>Best for:</p>
                         <ul>
@@ -119,6 +124,7 @@
                             <li>Something else</li>
                         </ul>
                     </div>
+                    <a href="" class="view-docs">View Docs →</a>
                 </div>
 
             </div>
@@ -127,6 +133,6 @@
 
 
 </body>
-<script src="./script.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
 </html>
 {% endblock %}

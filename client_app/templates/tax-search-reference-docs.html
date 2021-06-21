@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <main>
+        <!-- Navigation Bar -->
+        <div class="api-nav">
+            <span class="api-name">Search Tax API</span>
+            <a href="{% url 'tax-search-get-started' %}" class="nav-tab">Get Started</a>
+            <a href="{% url 'tax-search-reference-docs' %}" class="nav-tab">Reference Docs</a>
+            <a href="" class="nav-tab">Release Notes</a>
+
+            <a href="" class="try-now">Try Now</a>
+            <a href="" class="get-access">Get Access</a>
+        </div>
+
+        <!-- Documentation Container -->
+        <div class="documentation-container">
+            <!-- API Nav -->
+            <div class="category-nav">
+                <div class="category">
+                    <span class="category-title">Category</span>
+                    <ul class="action-list">
+                        <li class="action"><span class="get">GET</span><span class="active-get">Search All</span></li>
+                        <li class="action"><span class="get">GET</span>Search Portfolios</li>
+                        <li class="action"><span class="get">GET</span>Search Treaties</li>
+                        <li class="action"><span class="get">GET</span>Search Practice Guides</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <span class="category-title">Category</span>
+                    <ul class="action-list">
+                        <li class="action"><span class="get">GET</span>Search All</li>
+                        <li class="action"><span class="get">GET</span>Search Portfolios</li>
+                        <li class="action"><span class="get">GET</span>Search Treaties</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="api-example">
+                <h1>Reference Documentation</h1>
+                <p>This API provides an interface for our search service across the Bloomberg Tax product. It enables open integration channels for our customers and partners.</p>
+                <hr>
+                <h2 class="search-all-title">Search All</h2>
+                <div><span class="get big">GET</span><span class="url">/tax/search/all/{query_term}</span></div>
+                <p>Search a query across the entire Tax product, including portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables</p>
+                <div class="room"></div>
+                <div class="room"></div>
+
+                <h3 class="search-all-title">Code Implementation Examples</h3>
+                <h4>Axios</h4>
+                <div class="code-snippet">
+                    <span class="code">1  &nbsp;&nbsp;import axios from "axios";</span>
+                    <span class="code">2</span>
+                    <span class="code">3  &nbsp;&nbsp;const options = {</span>
+                    <span class="code">4    &nbsp;&nbsp;&nbsp;&nbsp;method: 'GET',</span>
+                    <span class="code">5    &nbsp;&nbsp;&nbsp;&nbsp;url: 'https://api-bloomberg-indg.com/tax/search/all/%query_term%',</span>
+                    <span class="code">6    &nbsp;&nbsp;&nbsp;&nbsp;headers: {</span>
+                    <span class="code">7      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accept: 'application/json',</span>
+                    <span class="code">8      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'content-type': 'application/json',</span>
+                    <span class="code">9      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Autherization: 'SOME_STRING_VALUE'</span>
+                    <span class="code">10  &nbsp;&nbsp;}</span>
+                    <span class="code">13&nbsp;&nbsp;};</span>
+                </div>
+
+                <h4>Fetch</h4>
+                <div class="code-snippet">
+                    <span class="code">1  &nbsp;&nbsp;fetch("https://api-bloomberg-indg.com/tax/search/all/%query_term%", {</span>
+                    <span class="code">2&nbsp;&nbsp;&nbsp;&nbsp;"method": "GET",</span>
+                    <span class="code">3  &nbsp;&nbsp;&nbsp;&nbsp;"headers": {</span>
+                    <span class="code">4    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"accept": "application/json",</span>
+                    <span class="code">5    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"content-type": "application/json",</span>
+                    <span class="code">6    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Authorization": "SOME_STRING_VALUE"</span>
+                    <span class="code">7      &nbsp;&nbsp;&nbsp;&nbsp;}</span>
+                    <span class="code">8      &nbsp;&nbsp;})</span>
+                    <span class="code">9      &nbsp;&nbsp;.then(response => {</span>
+                    <span class="code">10  &nbsp;&nbsp;&nbsp;&nbsp;console.log(response);</span>
+                    <span class="code">13&nbsp;&nbsp;})</span>
+                    <span class="code">14      &nbsp;&nbsp;.catch(err => {</span>
+                    <span class="code">15  &nbsp;&nbsp;&nbsp;&nbsp;console.log(err);</span>
+                    <span class="code">16&nbsp;&nbsp;});</span>
+                </div>
+
+                <h3 class="search-all-title">Parameters</h3>
+                <table>
+                    <tr>
+                        <th>NAME</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                    <tr>
+                        <td><span class="param">query_term</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">string</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-location">(path)</span><hr></td>
+                        <td>The seach term<hr></td>
+
+                    </tr>
+
+                    <tr>
+                        <td><span class="param">Authorization</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">string</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-location">(header)</span><hr></td>
+                        <td>Auth Access Token<hr></td>
+                    </tr>
+                </table>
+
+                <h3>Responses</h3>
+                <div class="room"></div>
+
+                <h4>200 Sample Response</h4>
+                <div class="download">
+                    <a href="./search-tax.json" download class="download"><i class="fas fa-file-download"><span class="download">&nbsp;&nbsp;Download Sample JSON</span></i></a>
+                </div>
+                    <div class="code-snippet">
+                        <span class="code">{</span>
+                        <span class="code">&nbsp;&nbsp;"query_term": "depreciation",</span>
+                        <span class="code">&nbsp;&nbsp;"portfolios": [</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Depreciation: General Concepts; Non-ACRS Rules (530 T.M.)",</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/tm%20530"</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Depreciation: MACRS and ACRS (531 T.M.)",</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/tm%20531"</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;],</span>
+                        <span class="code">&nbsp;&nbsp;"codes_and_regulations": [</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "I.R.C. &#167; 167 Depreciation",</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/26%20usc%20167"</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "I.R.C. &#167; 168 Accelerated Cost Recovery System",</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/26%20usc%20168"</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                            <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Reg. &#167; 1.167(a)-1 Depreciation In General -",</span>
+                            <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/26%20cfr%201.167%"</span>
+                            <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;],</span>
+                        <span class="code">}</span>
+                    </div>
+                    <hr>
+                <h2 class="search-all-title">Search Portfolios</h2>
+                <div><span class="get big">GET</span><span class="url">/tax/search/all/{query_term}</span></div>
+                <p>Search a query across the entire Tax product, including portfolios, codes and regulations, key rulings, related analysis, practice guides, and tables</p>
+                <div class="room"></div>
+                <div class="room"></div>
+
+                <h3 class="search-all-title">Code Implementation Examples</h3>
+                <h4>Axios</h4>
+                <div class="code-snippet">
+                    <span class="code">1  &nbsp;&nbsp;import axios from "axios";</span>
+                    <span class="code">2</span>
+                    <span class="code">3  &nbsp;&nbsp;const options = {</span>
+                    <span class="code">4    &nbsp;&nbsp;&nbsp;&nbsp;method: 'GET',</span>
+                    <span class="code">5    &nbsp;&nbsp;&nbsp;&nbsp;url: 'https://api-bloomberg-indg.com/tax/search/all/%query_term%',</span>
+                    <span class="code">6    &nbsp;&nbsp;&nbsp;&nbsp;headers: {</span>
+                    <span class="code">7      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accept: 'application/json',</span>
+                    <span class="code">8      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'content-type': 'application/json',</span>
+                    <span class="code">9      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Autherization: 'SOME_STRING_VALUE'</span>
+                    <span class="code">10  &nbsp;&nbsp;}</span>
+                    <span class="code">13&nbsp;&nbsp;};</span>
+                </div>
+
+                <h4>Fetch</h4>
+                <div class="code-snippet">
+                    <span class="code">1  &nbsp;&nbsp;fetch("https://api-bloomberg-indg.com/tax/search/all/%query_term%", {</span>
+                    <span class="code">2&nbsp;&nbsp;&nbsp;&nbsp;"method": "GET",</span>
+                    <span class="code">3  &nbsp;&nbsp;&nbsp;&nbsp;"headers": {</span>
+                    <span class="code">4    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"accept": "application/json",</span>
+                    <span class="code">5    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"content-type": "application/json",</span>
+                    <span class="code">6    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Authorization": "SOME_STRING_VALUE"</span>
+                    <span class="code">7      &nbsp;&nbsp;&nbsp;&nbsp;}</span>
+                    <span class="code">8      &nbsp;&nbsp;})</span>
+                    <span class="code">9      &nbsp;&nbsp;.then(response => {</span>
+                    <span class="code">10  &nbsp;&nbsp;&nbsp;&nbsp;console.log(response);</span>
+                    <span class="code">13&nbsp;&nbsp;})</span>
+                    <span class="code">14      &nbsp;&nbsp;.catch(err => {</span>
+                    <span class="code">15  &nbsp;&nbsp;&nbsp;&nbsp;console.log(err);</span>
+                    <span class="code">16&nbsp;&nbsp;});</span>
+                </div>
+
+                <h3 class="search-all-title">Parameters</h3>
+                <table>
+                    <tr>
+                        <th>NAME</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                    <tr>
+                        <td><span class="param">query_term</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">string</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-location">(path)</span><hr></td>
+                        <td>The seach term<hr></td>
+
+                    </tr>
+
+                    <tr>
+                        <td><span class="param">Authorization</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-type">string</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="param-location">(header)</span><hr></td>
+                        <td>Auth Access Token<hr></td>
+                    </tr>
+                </table>
+
+                <h3>Responses</h3>
+                <div class="room"></div>
+
+                <h4>200 Sample Response</h4>
+                <div class="download">
+                    <a href="./search-tax.json" download class="download"><i class="fas fa-file-download"><span class="download">&nbsp;&nbsp;Download Sample JSON</span></i></a>
+                </div>
+                    <div class="code-snippet">
+                        <span class="code">{</span>
+                        <span class="code">&nbsp;&nbsp;"query_term": "depreciation",</span>
+                        <span class="code">&nbsp;&nbsp;"portfolios": [</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Depreciation: General Concepts; Non-ACRS Rules (530 T.M.)",</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/tm%20530"</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Depreciation: MACRS and ACRS (531 T.M.)",</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/tm%20531"</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;],</span>
+                        <span class="code">&nbsp;&nbsp;"codes_and_regulations": [</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "I.R.C. &#167; 167 Depreciation",</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/26%20usc%20167"</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "I.R.C. &#167; 168 Accelerated Cost Recovery System",</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/26%20usc%20168"</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span>
+                            <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Reg. &#167; 1.167(a)-1 Depreciation In General -",</span>
+                            <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "https://www.bloomberglaw.com/product/tax/citation/26%20cfr%201.167%"</span>
+                            <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span>
+                        <span class="code">&nbsp;&nbsp;],</span>
+                        <span class="code">}</span>
+                    </div>
+            </div>
+            </div>
+    </main>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>
+{% endblock %}

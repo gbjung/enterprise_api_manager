@@ -6,6 +6,9 @@ apiLibraryLink.addEventListener("click", function() {
     dropdownMenu.classList.toggle("hide");
 })
 
-// body.addEventListener("click", function() {
-//     dropdownMenu.classList.add("hide");
-// })
+let target = document.querySelector(".target");
+
+target.addEventListener("click", function() {
+})
+
+

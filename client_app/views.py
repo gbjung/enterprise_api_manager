@@ -25,3 +25,27 @@ class SearchResultView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
+class TaxSearchHomeView(TemplateView):
+
+    template_name = "tax-search-home.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+class TaxSearchGetStartedView(TemplateView):
+
+    template_name = "tax-search-get-started.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+class TaxSearchReferenceView(TemplateView):
+
+    template_name = "tax-search-reference-docs.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
